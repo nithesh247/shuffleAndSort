@@ -1,0 +1,178 @@
+:root {
+  --font-size: 16px;
+  --c-1: #2b8ead;
+  --c-2: #000000;
+  --c-3: #333333;
+  --c-4: #6f98a8;
+  --c-5: #ffffff;
+  --c-6: #bfbfbf;
+  --c-7: #efefef;
+  --c-8: #2f454e;
+  --c-9: #72c3dc;
+  --border: 5px;
+}
+
+body {
+  margin: 0;
+  font-size: var(--font-size);
+  width: 100vw;
+  background-color: var(--c-7);
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.c1 {
+  background-color: var(--c-1);
+}
+
+.c3 {
+  background-color: var(--c-3);
+}
+
+.c4 {
+  background-color: var(--c-4);
+}
+
+.c8 {
+  background-color: var(--c-8);
+}
+
+.c9 {
+  background-color: var(--c-9);
+}
+
+.d-flex-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.h-center {
+  justify-content: center;
+}
+
+.v-center {
+  align-items: center;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  color: var(--c-5);
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.m-sides {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.button-primary {
+  background-color: var(--c-9);
+  border-bottom: var(--border) solid var(--c-1);
+  border-radius: var(--border);
+}
+
+.main-content {
+  border-top: var(--border) solid var(--c-6);
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.box-container {
+  width: 80%;
+}
+
+.action-container {
+  width: 20%;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.action-container button {
+  margin: 10px;
+}
+
+.box {
+  flex: 0 0 33.3%;
+  height: 150px;
+  color: var(--c-5);
+  font-size: 2em;
+  position: relative;
+}
+
+.badge {
+  display: none;
+}
+
+
+@media (max-width: 425px) {
+  .box-container {
+    width: 70%;
+  }
+  .action-container {
+    width: 30%;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    background-color: var(--c-5);
+    border: calc(var(--border) * 2) solid var(--c-2);
+    border-radius: var(--border);
+  }
+
+  header {
+    background-color: var(--c-3);
+    color: var(--c-6);
+  }
+
+  .box {
+    flex: 0 1 100%;
+    margin: 10px;
+    height: 50px;
+    background-color: var(--c-6);
+    font-size: 1em;
+    color: var(--c-2);
+  }
+
+  .main-content {
+    border: none;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+  }
+
+  .box-container,
+  .action-container {
+    width: 100%;
+  }
+
+  .action-container {
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+  .action-container button {
+    margin: 10px 5px 10px 0;
+  }
+
+  .badge {
+    display: initial;
+    width: 10px;
+    height: inherit;
+    position: absolute;
+    left: 0;
+  }
+}
