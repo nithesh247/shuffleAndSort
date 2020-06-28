@@ -119,12 +119,17 @@ button {
 }
 
 
+
+/* Mobile css */
 @media (max-width: 425px) {
   .box-container {
     width: 70%;
   }
   .action-container {
     width: 30%;
+  }
+  .box {
+    flex: 0 1 50%;
   }
 }
 @media (max-width: 375px) {
